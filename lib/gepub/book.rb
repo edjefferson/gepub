@@ -214,7 +214,7 @@ module GEPUB
         |k,v|
         zip_entry = Zip::Entry.new(nil, k, nil, nil, nil, nil, nil, nil, mod_time)
         epub.put_next_entry(zip_entry)
-        epub << v.force_encoding('us-ascii')
+        epub << v.force_encoding('utf-8')
       }
     end
 
